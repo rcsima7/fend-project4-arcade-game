@@ -34,6 +34,12 @@ var Player = function (x, y, speed) {
   this.x = x;
   this.y = y;
   this.speed = speed
+  this.sprite = 'images/char-pink-girl.png';
+};
+
+// Draw the Player on the screen
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 // Now instantiate your objects.
