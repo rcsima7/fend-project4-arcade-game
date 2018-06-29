@@ -18,7 +18,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     //Set speed on the X axis to equal delta time
-    this.x = this.speed * dt
+    this.x = this.speed * dt;
 };
 
 // Draw the enemy on the screen, required method for game
@@ -26,10 +26,15 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-
+var Player = function (x, y, speed) {
+  this.x = x;
+  this.y = y;
+  this.speed = speed
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
