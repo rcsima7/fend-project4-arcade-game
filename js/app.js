@@ -93,7 +93,7 @@ enemyPlace.forEach(function (placeOnY) {
   allEnemies.push(enemy);
 });
 // Place the player object in a variable called player
-
+const player = new Player(205, 350);
 
 
 // This listens for key presses and sends the keys to your
