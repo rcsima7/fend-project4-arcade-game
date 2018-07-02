@@ -19,6 +19,13 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     //Set speed on the X axis to equal delta time
     this.x += this.speed * dt;
+    // set x axis point: if enemy reaches this point, it should reappeear at the beginning of x axis
+    if (this.x > 530) {
+        this.x 0 -70;
+        //Give start speed and ranomize speed
+        // *Shuffle function found on w3schools: Javascript Random - Math.Random
+        this.speed = 100 + Math.floor(Math.random) * 312;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
