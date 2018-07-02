@@ -55,11 +55,24 @@ var Player = function (x, y, speed) {
   this.sprite = 'images/char-pink-girl.png';
 };
 
+Player.prototype.update = function() {
+
+};
+
 // Draw the Player on the screen
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+Player.prototype.handleInput = function(arrowKey) {
+  if(arrowKey == 'right' && this.x < 395) {
+    this.x += 105;
+  }
+  if(arrowKey == 'left' && this.x > 0) {
+    this.x -= 105;
+  }
+  
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
