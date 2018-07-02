@@ -84,6 +84,14 @@ Player.prototype.handleInput = function(arrowKey) {
 };
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+const allEnemies = [];
+// Enemies located at 3 points of y axis
+const enemyPlace = [50, 150, 200];
+// Creates new enemies at 0 point on X axis
+enemyPlace.forEach(function (placeOnY) {
+  enemy = new Enemy(0, placeOnY, 100 + Math.floor(Math.random) * 312);
+  allEnemies.push(enemy);
+});
 // Place the player object in a variable called player
 
 
