@@ -66,13 +66,18 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function(arrowKey) {
   if(arrowKey == 'right' && this.x < 395) {
-    this.x += 105;
+    this.x += 60;
   }
   if(arrowKey == 'left' && this.x > 0) {
-    this.x -= 105;
+    this.x -= 60;
   }
-  
-}
+  if(arrowKey == 'up' && this.y > 0) {
+    this.y -= 60;
+  }
+  if(arrowKey == 'down' && this.y < 395) {
+    this.y += 60;
+  }
+};
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
