@@ -56,7 +56,11 @@ var Player = function (x, y, speed) {
 };
 
 Player.prototype.update = function() {
-
+  //Reset player to initial location upon reaching the water
+  if (this.y < 0) {
+    player.x = 205;
+    player.y = 350;
+  }
 };
 
 // Draw the Player on the screen
