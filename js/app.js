@@ -26,6 +26,17 @@ Enemy.prototype.update = function(dt) {
         // *Shuffle function found on w3schools: Javascript Random - Math.Random
         this.speed = 100 + Math.floor(Math.random) * 312;
     }
+
+    //If collision happens
+    //Sprite and player dimensions are the same width and height
+    if (player.x < this.x + 70 &&
+        player.x + 70 > this.x &&
+        player.y < this.y + 50 &&
+        player.y + 50 > this.y) {
+    //Reset player to initial location upon collisioin
+        player.x = 205;
+        player.y = 350;
+        }
 };
 
 // Draw the enemy on the screen, required method for game
