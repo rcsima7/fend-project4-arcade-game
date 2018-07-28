@@ -35,7 +35,7 @@ Enemy.prototype.update = function(dt) {
         player.y + 50 > this.y) {
     //Reset player to initial location upon collisioin
         player.x = 205;
-        player.y = 350;
+        player.y = 380;
         }
 };
 
@@ -78,7 +78,7 @@ Player.prototype.handleInput = function(arrowKey) {
   if(arrowKey == 'up' && this.y > 0) {
     this.y -= 80;
   }
-  if(arrowKey == 'down' && this.y < 395) {
+  if(arrowKey == 'down' && this.y < 380) {
     this.y += 80;
   }
 };
