@@ -60,6 +60,8 @@ Player.prototype.update = function() {
   if (this.y < 0) {
     player.x = 205;
     player.y = 380;
+    alert("GREAT JOB! YOU WON :D")
+    //document.location.reload();
   }
 };
 
@@ -83,9 +85,12 @@ Player.prototype.handleInput = function(arrowKey) {
   }
 };
 // Now instantiate your objects.
-var enemy1 = new Enemy(200, 200);
+var enemy1 = new Enemy(200, 225);
+var enemy2 = new Enemy(200, 145);
+var enemy3 = new Enemy(500, 145);
+var enemy4 = new Enemy(400, 65);
 // Place all enemy objects in an array called allEnemies
-var allEnemies = [enemy1];
+var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 // Enemies located at 3 points of y axis
 //const enemyPlace = [50, 150, 200];
 // Creates new enemies at 0 point on X axis
