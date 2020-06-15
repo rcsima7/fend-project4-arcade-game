@@ -1,6 +1,6 @@
 # Frontend Nanodegree: Project 6 Arcade Game #
 
-This is a project in Udacity's Front End Developer Nanodegree program.
+This is a project in the Google Front End Developer Nanodegree program by Udacity.
 
 The project's purpose is to use object oriented JavaScript to create a game similar to Frogger.
 
